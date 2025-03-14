@@ -31,11 +31,13 @@ public class ItemRestController
     {
         return service.getById(id);
     }
+
     @DeleteMapping("/{id}")
     public void delete(@PathVariable String id)
     {
         service.deleteById(id);
     }
+
     @PostMapping
     public Item create(@RequestBody Item item)
     {
@@ -48,4 +50,24 @@ public class ItemRestController
         return service.update(item);
     }
 
+    @GetMapping("/name/{id}")
+    public String getNameById(@PathVariable String id)
+    {
+        return service.getNameById(id);
+    }
+    @GetMapping("/helloadmin")
+    public String helloAdmin()
+    {
+        return "Hello Admin";
+    }
+    @GetMapping("/hellouser")
+    public String helloUser()
+    {
+        return "Hello User";
+    }
+    @GetMapping("/helloguest")
+    public String helloGuest()
+    {
+       return "Hello Guest";
+    }
 }
