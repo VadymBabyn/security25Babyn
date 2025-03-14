@@ -1,0 +1,48 @@
+### get ALL Items
+GET http://localhost:8079/api/v1/items
+###
+
+### get item by ID
+GET http://localhost:8079/api/v1/items/2
+
+
+### delete item
+DELETE http://localhost:8079/api/v1/items/2
+
+
+### Create Item
+POST http://localhost:8079/api/v1/items
+Content-Type: application/json
+
+{
+  "id": "2",
+  "name": "test2",
+  "description": "dis2"
+}
+
+
+### Update Item
+POST http://localhost:8079/api/v1/items
+Content-Type: application/json
+
+{
+  "id": "2",
+  "name": "updated name2",
+  "description": "dis2"
+}
+
+### Get name by id
+GET http://localhost:8079/api/v1/items/name/3
+
+
+### Hello admin
+GET http://localhost:8079/api/v1/items/helloadmin
+
+
+### Hello user
+GET http://localhost:8079/api/v1/items/hellouser
+
+
+### Hello guest
+GET http://localhost:8079/api/v1/items/helloguest
+###

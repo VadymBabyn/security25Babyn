@@ -49,4 +49,12 @@ public class ItemService {
     public Item update(Item item) {
         return repository.save(item);
     }
+
+    public String getNameById(String id) {
+        Item item = repository.findById(id).orElse(null);
+        if (item == null) {
+            return null;
+        }
+        return item.getName();
+    }
 }
