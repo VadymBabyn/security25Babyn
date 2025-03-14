@@ -21,9 +21,9 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "id": "2",
-  "name": "test2",
-  "description": "dis2"
+  "id": "4",
+  "name": "test4",
+  "description": "dis4"
 }
 
 
