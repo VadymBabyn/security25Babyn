@@ -1,0 +1,92 @@
+### Create Item
+POST http://localhost:8079/api/v1/items
+Authorization: Basic superadmin superadmin
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "6",
+  "name": "test45",
+  "description": "dis45"
+}
+
+### Update Item
+PUT http://localhost:8079/api/v1/items
+Authorization: Basic superadmin superadmin
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "6",
+  "name": "test45555",
+  "description": "dis4"
+}
+
+### Create Item
+POST http://localhost:8079/api/v1/items
+Authorization: Basic admin admin
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "7",
+  "name": "test77",
+  "description": "dis77"
+}
+
+### Update Item
+PUT http://localhost:8079/api/v1/items
+Authorization: Basic admin admin
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "7",
+  "name": "test updated",
+  "description": "dis updated"
+}
+
+### get item by ID
+GET http://localhost:8079/api/v1/items/7
+Authorization: Basic admin admin
+Accept: application/json
+
+### get item by ID
+GET http://localhost:8079/api/v1/items/6
+Authorization: Basic admin admin
+Accept: application/json
+
+### delete item
+DELETE http://localhost:8079/api/v1/items/6
+Authorization: Basic user user
+Accept: application/json
+
+### delete item
+DELETE http://localhost:8079/api/v1/items/7
+Authorization: Basic user user
+Accept: application/json
+
+### Create Item
+POST http://localhost:8079/api/v1/items
+Authorization: Basic vadim admin  #invadid login password testing
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "6",
+  "name": "test6",
+  "description": "dis6"
+}
+
+
+### Create Item
+POST http://localhost:8079/api/v1/items
+Authorization: Basic superadmin superadmin
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "6",
+  "name": "test6",
+  "description": "dis6"
+}

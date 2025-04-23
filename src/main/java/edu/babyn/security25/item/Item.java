@@ -23,7 +23,7 @@ import java.util.Objects;
 @Builder
 @ToString
 
-public class Item {
+public class Item extends AuditMetaData{
     @Id
     private String id;
     private String name;
