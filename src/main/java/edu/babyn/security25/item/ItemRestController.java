@@ -1,6 +1,7 @@
 package edu.babyn.security25.item;
 
 import lombok.AllArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -55,19 +56,31 @@ public class ItemRestController
     {
         return service.getNameById(id);
     }
+
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/helloadmin")
     public String helloAdmin()
     {
         return "Hello Admin";
     }
+
+    @PreAuthorize("hasRole('USER')")
     @GetMapping("/hellouser")
     public String helloUser()
     {
         return "Hello User";
     }
+
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     @GetMapping("/helloguest")
     public String helloGuest()
     {
        return "Hello Guest";
+    }
+
+    @GetMapping("/helloeveryone")
+    public String helloEveryone()
+    {
+        return "Hello Everyone";
     }
 }
