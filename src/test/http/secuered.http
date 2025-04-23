@@ -50,12 +50,12 @@ Authorization: Basic vadim admin
 Accept: application/json
 
 ### Hello user
-GET http://localhost:8079/api/v1/items/hellouser
-Authorization: Basic vadim admin
+GET http://localhost:8088/api/v1/items/hellouser
+Authorization: Basic user user
 Accept: application/json
 
 ### Hello guest
-GET http://localhost:8079/api/v1/items/helloguest
-Authorization: Basic vadim admin
+GET http://localhost:8088/api/v1/items/helloguest
+Authorization: Basic superadmin superadmin
 Accept: application/json
 ###

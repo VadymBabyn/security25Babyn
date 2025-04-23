@@ -57,22 +57,25 @@ public class ItemRestController
         return service.getNameById(id);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+
     @GetMapping("/helloadmin")
+    @PreAuthorize("hasRole('ADMIN')")
     public String helloAdmin()
     {
         return "Hello Admin";
     }
 
-    @PreAuthorize("hasRole('USER')")
+
     @GetMapping("/hellouser")
+    @PreAuthorize("hasRole('USER')")
     public String helloUser()
     {
         return "Hello User";
     }
 
-    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
+
     @GetMapping("/helloguest")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public String helloGuest()
     {
        return "Hello Guest";

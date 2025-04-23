@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor;
 import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.User;
@@ -25,6 +26,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
+@EnableMethodSecurity
 
 public class SecurityConfig
 {
@@ -42,7 +44,7 @@ public class SecurityConfig
         http.csrf(csrf ->csrf.disable())
                 .authorizeHttpRequests(req -> req.requestMatchers("/index.html").
                         permitAll().
-                        requestMatchers("/api/v1/items/helloadmin").hasRole("ADMIN").
+                        requestMatchers("/api/v1/items/hellouser").hasRole("USER").
                         anyRequest().authenticated())
                 .httpBasic(Customizer.withDefaults());
 
